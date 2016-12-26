@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'MyRoboto';
+    src: url('Rubik-Regular.ttf');
+}
+
 .meteo {
+    display:flex;
     background-color: skyblue;
-    height: 300px;
     width:100%;
 }
 
@@ -8,4 +13,33 @@
     background-color: lightseagreen;
     height: 300px;
     width:100%;
+}
+
+.credit
+{
+    color:white;
+}
+
+.weather-icon{
+    display: flex;
+    height: 512px;
+    width:512px;
+}
+
+img{
+    width:auto;
+    height:100%;
+}
+
+.current-temp{
+    font-family: 'MyRoboto';
+    font-size:750%;
+    margin:auto;
+}
+
+.min-max
+{
+    font-family: 'MyRoboto';
+    font-size:500%;
+    margin: auto;
 }
