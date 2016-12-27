@@ -10,9 +10,17 @@
 }
 
 .stif{
-    background-color: lightseagreen;
-    height: 300px;
+    margin-top:100px;
+    display:flex;
+    height: 700px;
     width:100%;
+}
+
+.train
+{
+    height:512px;
+    width:auto;
+    margin:auto;
 }
 
 .credit
@@ -42,4 +50,22 @@ img{
     font-family: 'MyRoboto';
     font-size:500%;
     margin: auto;
+}
+
+.direction
+{
+    font-family: 'MyRoboto';
+    font-size:400%;
+    max-width: 300px;
+    margin:auto;
+}
+.horaire-list
+{
+    margin:auto;
+}
+.horaire-item
+{
+    font-family: 'MyRoboto';
+    font-size:400%;
+    margin:auto; 
 }
