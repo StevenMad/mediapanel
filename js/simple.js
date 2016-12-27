@@ -1,16 +1,32 @@
-var req = new XMLHttpRequest();
-req.open('GET' , 'http://api.openweathermap.org/data/2.5/weather?units=metric&q=Paris,fr&APPID=18f5f1e035cfd691cbb990ac6b06cb24', false);
-req.send(null);
-if(req.status==200)
+var x=setInterval(getDate,1000);
+var t=setInterval(updateWeather,1000);
+function updateWeather()
 {
-    var obj = JSON.parse(req.responseText);
-    console.log(obj)
-    var chaine = obj['weather'][0]["description"];
-    $('.current-temp').html(obj['main']['temp']+" ° C");
-    var min = obj['main']['temp_min']+" ° C";
-    var max = obj['main']['temp_max']+" ° C";
-    $('.min-max').html('MIN : '+min+' - MAX : '+max)
-    $('.weather-icon').html(addImage(chaine));
+    $.ajax({
+        type:'GET',
+        url: 'http://api.openweathermap.org/data/2.5/weather?units=metric&q=Paris,fr&APPID=18f5f1e035cfd691cbb990ac6b06cb24',
+        success:function(obj,status,xhr){
+            var chaine = obj['weather'][0]["description"];
+            $('.current-temp').html(obj['main']['temp']+" ° C");
+            var min = obj['main']['temp_min']+" ° C";
+            var max = obj['main']['temp_max']+" ° C";
+            $('.min-max').html('MIN : '+min+' - MAX : '+max)
+            $('.weather-icon').html(addImage(chaine));
+        }
+    })
+}
+
+async function getDate()
+{
+    var currentdate = new Date(); 
+    var datetime = "Today : " + currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() + " <br/>"  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+    console.log(datetime);
+    $('.daytime').html(datetime);
 }
 
 function addImage(description)
