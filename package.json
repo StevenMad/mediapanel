@@ -1,0 +1,8 @@
+{
+    "name":"my_package",
+    "version":"1.0.0",
+    "dependecies":{
+        "connect":">= 1.0.0",
+        "serve-static":">=1.0.0"
+    }
+}
