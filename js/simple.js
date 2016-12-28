@@ -16,17 +16,22 @@ function updateWeather()
     })
 }
 
-async function getDate()
+function getDate()
 {
-    var currentdate = new Date(); 
-    var datetime = "Today : " + currentdate.getDate() + "/"
+    $.ajax({
+        success:function(obj,status,xhr)
+        {
+            var currentdate = new Date(); 
+            var datetime = "Today : " + currentdate.getDate() + "/"
                     + (currentdate.getMonth()+1)  + "/" 
                     + currentdate.getFullYear() + " <br/>"  
                     + currentdate.getHours() + ":"  
                     + currentdate.getMinutes() + ":" 
                     + currentdate.getSeconds();
-    console.log(datetime);
-    $('.daytime').html(datetime);
+            console.log(datetime);
+            $('.daytime').html(datetime);
+        }
+    })
 }
 
 function addImage(description)
