@@ -10,7 +10,8 @@ function updateWeather()
             $('.current-temp').html(obj['main']['temp']+" ° C");
             var min = obj['main']['temp_min']+" ° C";
             var max = obj['main']['temp_max']+" ° C";
-            $('.min-max').html('MIN : '+min+' - MAX : '+max)
+            $('.min-max').html('MIN : '+min+' - MAX : '+max);
+            $('.weather-name').html(chaine);
             $('.weather-icon').html(addImage(chaine));
         }
     })
@@ -22,16 +23,23 @@ function getDate()
         success:function(obj,status,xhr)
         {
             var currentdate = new Date(); 
-            var datetime = "Today : " + currentdate.getDate() + "/"
-                    + (currentdate.getMonth()+1)  + "/" 
-                    + currentdate.getFullYear() + " <br/>"  
-                    + currentdate.getHours() + ":"  
-                    + currentdate.getMinutes() + ":" 
-                    + currentdate.getSeconds();
+            var datetime = "Today : " + getTime(currentdate.getDate()) + "/"
+                    + getTime((currentdate.getMonth()+1))  + "/" 
+                    + getTime(currentdate.getFullYear()) + " <br/>"  
+                    + getTime(currentdate.getHours()) + ":"  
+                    + getTime(currentdate.getMinutes()) + ":" 
+                    + getTime(currentdate.getSeconds());
             console.log(datetime);
             $('.daytime').html(datetime);
         }
     })
+}
+
+function getTime(time)
+{
+    if(time<10)
+        return '0'+time;
+    return time;
 }
 
 function addImage(description)

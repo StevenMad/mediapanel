@@ -43,10 +43,15 @@
     color:white;
 }
 
+.weather-name{
+    font-family: 'MyRoboto';
+    font-size:400%;
+    text-align:center;
+}
 .weather-icon{
     display: flex;
-    height: 512px;
-    width:512px;
+    height: 400px;
+    width:400px;
 }
 
 img{
