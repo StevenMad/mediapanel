@@ -99,6 +99,7 @@ function addImage(description)
         case "light intensity drizzle":{id=5;break;}
         case "shower rain":{id=5;break;}
         case "rain":{id=6;break;}
+        case "light snow":{id=7;break;}
         case "snow":{id=7;break;}
         case "light shower snow":{id=7;break;}
         case "thunderstorm":{id=8;break;}
