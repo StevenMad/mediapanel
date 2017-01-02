@@ -10,9 +10,6 @@ function updateWeather()
         success:function(obj,status,xhr){
             var chaine = obj['weather'][0]["description"];
             $('.current-temp').html(obj['main']['temp']+" ° C");
-            //var min = obj['main']['temp_min']+" ° C";
-            //var max = obj['main']['temp_max']+" ° C";
-            //$('.min-max').html('MIN : '+min+' - MAX : '+max);
             $('.weather-name').html(chaine);
             $('.weather-icon').html(addImage(chaine));
         }
