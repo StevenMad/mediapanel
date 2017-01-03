@@ -13,12 +13,12 @@ function updateTrain()
             for(var i=0;i<liste.length;i++)
             {
                 var direction = liste[i]['display_informations']['direction'];
-//                console.log(direction);
+                console.log(direction);
                 switch(direction)
                 {
                     case "Montigny-Beauchamp (Beauchamp)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
                     case "Pontoise (Pontoise)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
-                    case "Chaville-Velizy (Velizy)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
+                    case "Chaville-Velizy (Viroflay)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
                 }
             }
             $('.horaire-list').html(horaires);    
