@@ -98,6 +98,7 @@ function addImage(description)
         case "broken clouds":{id=4;break;}
         case "light intensity drizzle":{id=5;break;}
         case "shower rain":{id=5;break;}
+        case "light rain":{id=5;break;}
         case "rain":{id=6;break;}
         case "light snow":{id=7;break;}
         case "snow":{id=7;break;}
