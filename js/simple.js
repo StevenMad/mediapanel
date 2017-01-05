@@ -1,7 +1,7 @@
 setInterval(getDate,1000);
 var t=setInterval(updateWeather,1000);
 getDailyWeather();
-setInterval(getDailyWeather,60000*60*24);
+setInterval(getDailyWeather,60000*60*10);
 function updateWeather()
 {
     $.ajax({
