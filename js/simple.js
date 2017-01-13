@@ -1,5 +1,6 @@
 setInterval(getDate,1000);
 var t=setInterval(updateWeather,1000);
+var i=0;
 getDailyWeather();
 setInterval(getDailyWeather,60000*60*10);
 function updateWeather()
@@ -12,6 +13,8 @@ function updateWeather()
             $('.current-temp').html(obj['main']['temp']+" ° C");
             $('.weather-name').html(chaine);
             $('.weather-icon').html(addImage(chaine));
+            i++
+            console.log(i+" updated");
         }
     })
 }
