@@ -7,7 +7,10 @@ function updateWeather()
 {
     $.ajax({
         type:'GET',
-        url: 'http://api.openweathermap.org/data/2.5/weather?units=metric&q=Paris,fr&APPID=18f5f1e035cfd691cbb990ac6b06cb24',
+        url: 'http://api.openweathermap.org/data/2.5/weather?units=metric&q=Paris,fr',
+        data:{
+            'APPID':'1387e96c083003433d600c8f14249f09'
+        },
         success:function(obj,status,xhr){
             var chaine = obj['weather'][0]["description"];
             $('.current-temp').html(obj['main']['temp']+" ° C");
@@ -23,7 +26,10 @@ function getDailyWeather()
 {
     $.ajax({
         type:'GET',
-        url:'http://api.openweathermap.org/data/2.5/forecast?units=metric&q=Paris,fr&APPID=18f5f1e035cfd691cbb990ac6b06cb24',
+        url:'http://api.openweathermap.org/data/2.5/forecast?units=metric&q=Paris,fr',
+        data:{
+            'APPID':'1387e96c083003433d600c8f14249f09'
+        },
         success:function(obj,status,xhr){
             console.log(obj);
             getMinMax(obj['list']);
