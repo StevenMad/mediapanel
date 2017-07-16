@@ -16,8 +16,7 @@ function updateWeather()
             $('.current-temp').html(obj['main']['temp']+" ° C");
             $('.weather-name').html(chaine);
             $('.weather-icon').html(addImage(chaine));
-            i++
-            console.log(i+" updated");
+            i++;
         }
     })
 }

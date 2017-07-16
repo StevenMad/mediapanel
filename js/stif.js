@@ -19,6 +19,7 @@ function updateTrain()
                     case "Montigny-Beauchamp (Beauchamp)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
                     case "Pontoise (Pontoise)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
                     case "Chaville-Velizy (Viroflay)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
+                    case "Paris-Auster.(RER C ) (Paris)":horaires+='<div class="horaire-item">'+addDate(liste[i])+"</div>";break;
                 }
             }
             $('.horaire-list').html(horaires);    
