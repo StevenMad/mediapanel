@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'MyRoboto';
+    src: url('Rubik-Regular.ttf');
+}
+
+.daytime{
+    display:flex;
+    height:180px;
+    font-family: 'MyRoboto';
+    font-size:400%;
+    margin:auto;
+    /*background-color: lightyellow;*/
+}
+
+.meteo {
+    display:flex;
+    /*background-color: skyblue;*/
+    width:100%;
+}
+
+.stif{
+    padding-top:40px;
+    display:flex;
+    height: 400px;
+    width:100%;
+    /*background-color: teal;*/
+}
+
+.train-icon
+{
+    margin-left:30px;
+}
+
+.train
+{
+    height:300px;
+    width:auto;
+    margin:auto;
+}
+
+.credit
+{
+    color:white;
+}
+
+.weather-name{
+    font-family: 'MyRoboto';
+    font-size:400%;
+    text-align:center;
+}
+.weather-icon{
+    display: flex;
+    height: 400px;
+    width:400px;
+}
+
+img{
+    width:auto;
+    height:100%;
+}
+
+.current-temp{
+    font-family: 'MyRoboto';
+    font-size:750%;
+    margin:auto;
+}
+
+.min-max
+{
+    font-family: 'MyRoboto';
+    font-size:500%;
+    margin: auto;
+}
+
+.direction
+{
+    font-family: 'MyRoboto';
+    font-size:300%;
+    max-width: 300px;
+    margin:auto;
+}
+.horaire-list
+{
+    margin:auto;
+}
+.horaire-item
+{
+    font-family: 'MyRoboto';
+    font-size:300%;
+    margin:auto; 
+}
