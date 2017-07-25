@@ -1,11 +1,11 @@
 var page = getPage();
 updatePage(page);
-$("#btn").click(function (event) {
+$("#container").on("click","#btn",function() {
    var url = $(this).attr('href');
    url = url.substring(1,url.length);
-   console.log("upadting");
    updatePage(url);
-})
+});
+
 function getPage() {
    var url = document.location.href;
    var res = url.match(/#(.*)/g)
@@ -18,33 +18,35 @@ function getPage() {
 
 function updatePage(page) {
    if (page == "") {
-      $("#bg-container").removeClass("animated slideInRight");
-      $("#bg-container").addClass("animated slideOutLeft");
+      $("#container").removeClass("animated slideInRight");
+      $("#container").addClass("animated slideOutLeft");
       setTimeout(function()
       {
-         $("#bg-container").html("coucou");
-         $("#bg-container").removeClass("animated slideOutLeft");
-         $("#bg-container").addClass("animated slideInRight");
+         var bgContent = getBg();
+         $("#container").html(bgContent);
+         $("#container").removeClass("animated slideOutLeft");
+         $("#container").addClass("animated slideInRight");
       },1000);
    }
-   if (page == "view") {
-      $("#bg-container").removeClass("animated slideInRight");
-      $("#bg-container").addClass("animated slideOutLeft");
+   if (page == "frame") {
+      $("#container").removeClass("animated slideInRight");
+      $("#container").addClass("animated slideOutLeft");
       setTimeout(function()
       {
-         $("#bg-container").html("Vue ou pas vue");
-         $("#bg-container").removeClass("animated slideOutLeft");
-         $("#bg-container").addClass("animated slideInRight");
+         var frameContent = getFrame();
+         $("#container").html(frameContent);
+         $("#container").removeClass("animated slideOutLeft");
+         $("#container").addClass("animated slideInRight");
       },1000);
    }
    if (page == "panel") {
-      $("#bg-container").removeClass("animated slideInRight");
-      $("#bg-container").addClass("animated slideOutLeft");
+      $("#container").removeClass("animated slideInRight");
+      $("#container").addClass("animated slideOutLeft");
       setTimeout(function()
       {
-         $("#bg-container").html("panel ou pas");
-         $("#bg-container").removeClass("animated slideOutLeft");
-         $("#bg-container").addClass("animated slideInRight");
+         $("#container").html("panel ou pas");
+         $("#container").removeClass("animated slideOutLeft");
+         $("#container").addClass("animated slideInRight");
       },1000);
    }
 }

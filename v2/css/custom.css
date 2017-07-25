@@ -12,3 +12,42 @@
 {
   margin:4px;
 }
+
+#drawer
+{
+  border:none;
+  height:100vh;
+}
+
+#contentPanel
+{
+}
+
+.expl
+{
+  background-color: #006064;
+  color:white;
+  border-radius:4px;
+}
+
+.square-btn
+{
+  background-color: #006064;
+  height: 50px;
+  margin: 1%;
+  text-align: center;
+  color:white;
+}
+
+.square-btn:hover{
+  background-color: #4DB6AC;
+  cursor:pointer;
+}
+
+.square-color{
+  height:30px;
+}
+
+.square-color:hover{
+  cursor:pointer;
+}
